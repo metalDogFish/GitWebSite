@@ -21,13 +21,14 @@ section {
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
-    canvas {
-  display: block;
-}
 }
 
 .project a {
     margin-right: 15px;
     color: #0066cc;
+}
+
+    canvas {
+  display: block;
 }
 
