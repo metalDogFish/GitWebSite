@@ -27,3 +27,6 @@ section {
     margin-right: 15px;
     color: #0066cc;
 }
+canvas {
+  display: block;
+}
