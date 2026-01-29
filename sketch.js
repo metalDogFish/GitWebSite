@@ -18,7 +18,11 @@ var flowfield;
 var chBox, chBox2;
 
 function setup() {
-  createCanvas(300, 300);
+ 
+  let canvas = createCanvas(300, 300);
+  //reference container in index.js
+  canvas.parent('sketch-container');
+ 
   cols = floor(width / scl);
   rows = floor(height / scl);
 
