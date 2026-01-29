@@ -20,7 +20,7 @@ var chBox, chBox2;
 function setup() {
  
   let canvas = createCanvas(300, 300);
-  //reference container in index.js
+  //reference container in index.html
   canvas.parent('sketch-container');
  
   cols = floor(width / scl);
