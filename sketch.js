@@ -39,8 +39,10 @@ function setup() {
 
   chBox = createCheckbox("z dimension",true);
   chBox.style("color", col);
+ chBox.parent('sketch-container');
   chBox2 = createCheckbox("curtain");
   chBox2.style("color", col);
+  chBox2.parent('sketch-container');
 }
 
 function draw() {
