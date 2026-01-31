@@ -1,27 +1,15 @@
-
 body {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: #ffffff;
   font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: bgMove 10s ease-in-out infinite;
 }
-
-@keyframes bgMove {
-  0% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
-  50% { background: linear-gradient(135deg, #2a5298, #1e3c72); }
-  100% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
-}
-
 
 header {
     text-align: center;
