@@ -18,14 +18,19 @@ header {
 }
 
 section {
-    margin: 40px 0;
+  margin: 20px 0; /* Reduced margin for better alignment */
+  width: 100%;
+  max-width: 800px; /* Optional: limits width for better layout */
+  padding: 0 20px;
 }
 
 .project {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project a {
