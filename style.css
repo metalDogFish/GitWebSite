@@ -1,17 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
-     background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+    body {
+  background: url('texture.png') repeat;
   color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+    line-height: 1.6,
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 header {
     text-align: center;
