@@ -9,8 +9,10 @@ let btnUp, btnDn;
 //let isPaused = false;
 
 function setup() {
-  createCanvas(400, 400);
-
+ let canvas = createCanvas(400, 400);
+  //reference container in index.html
+  canvas.parent('sketch-container2');
+  
   //referenced by mold
   angleMode(DEGREES);
   d = pixelDensity();
