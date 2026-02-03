@@ -26,10 +26,13 @@ function setup() {
   slider = createSlider(0, 360, 45, 5);
   //slider.value = 45;
   slider.mouseClicked(sliderFunc);
+  slider.parent('sketch-container2');
   btnUp = createButton(" + ");
   btnUp.mouseClicked(butFuncUp);
+  btnUp.parent('sketch-container2');
   btnDn = createButton(" - ");
   btnDn.mouseClicked(butFuncDn);
+  btnDn.parent('sketch-container2');
   //-------------------end interface
 }
 
