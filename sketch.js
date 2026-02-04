@@ -23,14 +23,14 @@ p.setup = function(){
   //reference container in index.html
   canvas.parent('sketch-container');
  
-  cols = floor(width / scl);
-  rows = floor(height / scl);
+  cols = this.p.floor(width / scl);
+  rows = this.p.floor(height / scl);
 
   flowfield = new Array(cols * rows);
 
-  fr = createP("");
+  fr = this.p.createP("");
   fr.style("font-size", "16px");
-  let col = color(255);
+  let col = this.p.color(255);
   fr.style("color", col);
 
   for (let i = 0; i < 200; i++) {
@@ -38,17 +38,17 @@ p.setup = function(){
     particles[i] = new Particle(p, p.random(p.width),p.random(p.height)));
   }
 
-  chBox = createCheckbox("z dimension",true);
+  chBox = this.p.createCheckbox("z dimension",true);
   chBox.style("color", col);
  chBox.parent('sketch-container');
-  chBox2 = createCheckbox("curtain",true);
+  chBox2 = this.p.createCheckbox("curtain",true);
   chBox2.style("color", col);
   chBox2.parent('sketch-container');
 }
 
 //function draw() {
  p.draw = function(){
-  background(20, 90); //makes particles appear a bit translucent
+  this.p.background(20, 90); //makes particles appear a bit translucent
   // randomSeed(10);
   var yoff = 0;
   for (var y = 0; y < rows; y++) {
@@ -56,20 +56,20 @@ p.setup = function(){
     for (var x = 0; x < cols; x++) {
       var index = x + y * cols;
       //var n = noise(xoff, yoff) * 255;
-      var angle = noise(xoff, yoff, zoff) * TWO_PI * 2; //higher number induces more vortices.
-      var v = p5.Vector.fromAngle(angle);
+      var angle = this.p.noise(xoff, yoff, zoff) * this.p.TWO_PI * 2; //higher number induces more vortices.
+      var v = this.p.p5.Vector.fromAngle(angle);
       v.setMag(0.5);
       flowfield[index] = v;
       xoff += inc;
 
       if (!chBox2.checked()) {
         //green kelp
-        stroke(20, 130, 30, 80);
-        push();
-        translate(x * scl, y * scl);
-        rotate(angle); //v.heading());
-        line(0, 0, scl * 1.4, 0);
-         pop();
+        this.p.stroke(20, 130, 30, 80);
+        this.p.push();
+        this.p.translate(x * scl, y * scl);
+        this.p.rotate(angle); //v.heading());
+        this.p.line(0, 0, scl * 1.4, 0);
+         this.p.pop();
       }
       //fill(random(255));
       //fill(v);
@@ -94,16 +94,16 @@ p.setup = function(){
   //pop();
   //stroke(240);
   // fill(240);
-  fr.html(floor(frameRate()));
+  fr.html(this.p.floor(this.p.frameRate()));
 }
 
 function mouseClicked(){
-  let mx = mouseX;
-  let my = mouseY;
+  let mx = this.p.mouseX;
+  let my = this.p.mouseY;
   
-  let p = new Particle(mx,my)
+  let p = new Particle(p,mx,my)
   particles.push(p);
-  print('new particle')
+  this.p.print('new particle')
 }
 };
 
