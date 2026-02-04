@@ -2,15 +2,15 @@ class Mold {
   constructor(p) {
     this.p = p;
     // Mold variables
-    this.x = this.p.random(width);
-    this.y = this.p.random(height); 
+    this.x = this.p.random(this.p.width);
+    this.y = this.p.random(this.p.height); 
     // this.x = random(width/2 - 20, width/2 + 20);
     // this.y = random(height/2 - 20, height/2 + 20); 
     this.r = 0.5;
     
     this.heading = this.p.random(360);
-    this.vx = cos(this.heading);
-    this.vy = sin(this.heading);
+    this.vx = this.p.cos(this.heading);
+    this.vy = this.p.sin(this.heading);
     this.rotAngle = 45;
     this.stop = false // Boolean variable to stop molds from moving 
     
@@ -44,13 +44,13 @@ class Mold {
   
     // Get indices of the 3 sensor positions and get the color values from those indices
     let index, l, r, f;
-    index = 4*(d * floor(this.rSensorPos.y)) * (d * width) + 4*(d * floor(this.rSensorPos.x));
+    index = 4*(d * this.p.floor(this.rSensorPos.y)) * (d * this.p.width) + 4*(d * this.p.floor(this.rSensorPos.x));
     r = this.p.pixels[index];
     
-    index = 4*(d * floor(this.lSensorPos.y)) * (d * width) + 4*(d * floor(this.lSensorPos.x));
+    index = 4*(d * this.p.floor(this.lSensorPos.y)) * (d * this.p.width) + 4*(d * this.p.floor(this.lSensorPos.x));
     l = this.p.pixels[index];
     
-    index = 4*(d * floor(this.fSensorPos.y)) * (d * width) + 4*(d * floor(this.fSensorPos.x));
+    index = 4*(d * floor(this.fSensorPos.y)) * (d * this.p.width) + 4*(d * floor(this.fSensorPos.x));
     f = this.p.pixels[index];
     
     // Compare values of f, l, and r to determine movement 
