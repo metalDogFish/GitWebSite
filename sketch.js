@@ -34,7 +34,8 @@ p.setup = function(){
   fr.style("color", col);
 
   for (let i = 0; i < 200; i++) {
-    particles[i] = new Particle(p);
+   //This ensures your class works correctly within the p5 instance mode and doesn't conflict with other sketches.
+    particles[i] = new Particle(p, p.random(p.width),p.random(p.height)));
   }
 
   chBox = createCheckbox("z dimension",true);
