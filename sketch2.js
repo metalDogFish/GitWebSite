@@ -7,9 +7,10 @@ let d;
 let slider;
 let btnUp, btnDn;
 //let isPaused = false;
-
-function setup() {
- let canvas2 = createCanvas(400, 400);
+//instance mode
+let sketch2 = function(p){
+p.setup() = function(){
+ let canvas2 = p.createCanvas(400, 400);
   //reference container in index.html
   canvas2.parent('sketch-container2');
   
@@ -36,7 +37,7 @@ function setup() {
   //-------------------end interface
 }
 
-function draw() {
+p.draw = function() {
   //important that background is set to black, alpha = 5;
   background(0, 5);
 
@@ -91,6 +92,8 @@ function sliderFunc() {
     m.resetValue(sv);
   }
 }
+};
+new p5(sketch2);
 
 //2024/11/23-discovering slime molds-
 //testing code has revealing some interesting phenomena happing in the patterns when sensorAngle is changed.
