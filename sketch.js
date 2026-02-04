@@ -57,7 +57,9 @@ p.setup = function(){
       var index = x + y * cols;
       //var n = noise(xoff, yoff) * 255;
       var angle = p.noise(xoff, yoff, zoff) * p.TWO_PI * 2; //higher number induces more vortices.
-      var v = p.Vector.fromAngle(angle);
+     // var v = p.Vector.fromAngle(angle);
+     var v = p.createVector(1,0);
+     v.rotate(angle);
       v.setMag(0.5);
       flowfield[index] = v;
       xoff += inc;
@@ -94,7 +96,7 @@ p.setup = function(){
   //pop();
   //stroke(240);
   // fill(240);
-  fr.html(p.floor(this.p.frameRate()));
+  fr.html(p.floor(p.frameRate()));
 }
 
 //function mouseClicked(){
