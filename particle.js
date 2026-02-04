@@ -16,8 +16,8 @@ class Particle {
   }
 
   follow(vectors) {
-    var x = this.floor(this.pos.x / scl);
-    var y = this.floor(this.pos.y / scl);
+    var x = floor(this.pos.x / scl);
+    var y = floor(this.pos.y / scl);
     var index = x + y * cols;
     var force = vectors[index];
     this.applyForce(force);
