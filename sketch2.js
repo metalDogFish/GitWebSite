@@ -1,14 +1,16 @@
 //Slime Molds- changing the sensor angle results in wild variations..
 //----------------------------------------s.nykwist
 
-let molds = [];
+
+//instance mode
+let sketch2 = function(p){
+ //then variables
+ let molds = [];
 let num = 4000;
 let d;
 let slider;
 let btnUp, btnDn;
 //let isPaused = false;
-//instance mode
-let sketch2 = function(p){
 p.setup() = function(){
  let canvas2 = p.createCanvas(400, 400);
   //reference container in index.html
