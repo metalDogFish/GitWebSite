@@ -23,8 +23,8 @@ p.setup = function(){
   //reference container in index.html
   canvas.parent('sketch-container');
  
-  cols = this.p.floor(width / scl);
-  rows = this.p.floor(height / scl);
+  cols = this.p.floor(p.width / scl);
+  rows = this.p.floor(p.height / scl);
 
   flowfield = new Array(cols * rows);
 
