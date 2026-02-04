@@ -5,6 +5,10 @@
 //particles get their directional movement from surrounding flowfield. 
 //shawn nykwist
 
+//need to use instance mode when using multiple sketches
+let sketch1 = function(p){
+
+ 
 var inc = 0.1;
 var scl = 10;
 var cols, rows;
@@ -13,8 +17,6 @@ var zoff = 0;
 var particles = [];
 var flowfield;
 var chBox, chBox2;
-//need to use instance mode when using multiple sketches
-let sketch1 = function(p){
 p.setup = function(){
  
   let canvas = p.createCanvas(300, 300);
