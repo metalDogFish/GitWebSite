@@ -1,22 +1,23 @@
 class Mold {
-  constructor() {
+  constructor(p) {
+    this.p = p;
     // Mold variables
-    this.x = random(width);
-    this.y = random(height); 
+    this.x = this.p.random(width);
+    this.y = this.p.random(height); 
     // this.x = random(width/2 - 20, width/2 + 20);
     // this.y = random(height/2 - 20, height/2 + 20); 
     this.r = 0.5;
     
-    this.heading = random(360);
+    this.heading = this.p.random(360);
     this.vx = cos(this.heading);
     this.vy = sin(this.heading);
     this.rotAngle = 45;
     this.stop = false // Boolean variable to stop molds from moving 
     
     // Sensor variables
-    this.rSensorPos = createVector(0, 0);
-    this.lSensorPos = createVector(0, 0);
-    this.fSensorPos = createVector(0, 0);
+    this.rSensorPos = this.p.createVector(0, 0);
+    this.lSensorPos = this.p.createVector(0, 0);
+    this.fSensorPos = this.p.createVector(0, 0);
     this.sensorAngle = 90;//45;
     this.sensorDist = 10;
     
@@ -28,13 +29,13 @@ class Mold {
       this.vx = 0;
       this.vy = 0;
     } else {
-      this.vx = cos(this.heading);
-      this.vy = sin(this.heading);
+      this.vx = this.p.cos(this.heading);
+      this.vy = this.p.sin(this.heading);
     }
     
     // Using % Modulo expression to wrap around the canvas
-    this.x = (this.x + this.vx + width) % width;
-    this.y = (this.y + this.vy + height) % height;
+    this.x = (this.x + this.vx + this.p.width) % this.p.width;
+    this.y = (this.y + this.vy + this.p.height) % this.p.height;
     
     // Get 3 sensor positions based on current position and heading
     this.getSensorPos(this.rSensorPos, this.heading + this.sensorAngle);
@@ -44,19 +45,19 @@ class Mold {
     // Get indices of the 3 sensor positions and get the color values from those indices
     let index, l, r, f;
     index = 4*(d * floor(this.rSensorPos.y)) * (d * width) + 4*(d * floor(this.rSensorPos.x));
-    r = pixels[index];
+    r = this.p.pixels[index];
     
     index = 4*(d * floor(this.lSensorPos.y)) * (d * width) + 4*(d * floor(this.lSensorPos.x));
-    l = pixels[index];
+    l = this.p.pixels[index];
     
     index = 4*(d * floor(this.fSensorPos.y)) * (d * width) + 4*(d * floor(this.fSensorPos.x));
-    f = pixels[index];
+    f = this.p.pixels[index];
     
     // Compare values of f, l, and r to determine movement 
     if (f > l && f > r) {
       this.heading += 0;
     } else if (f < l && f < r) {
-      if (random(1) < 0.5) {
+      if (this.p.random(1) < 0.5) {
         this.heading += this.rotAngle;
       } else {
         this.heading -= this.rotAngle;
@@ -71,9 +72,9 @@ class Mold {
   }
   
   display() {
-    noStroke();
-    fill(255);
-    ellipse(this.x, this.y, this.r*2, this.r*2);
+    this.p.noStroke();
+    this.p.fill(255);
+    this.p.ellipse(this.x, this.y, this.r*2, this.r*2);
     
     // line(this.x, this.y, this.x + this.r*3*this.vx, this.y + this.r*3*this.vy);
     // fill(255, 0, 0);
@@ -84,13 +85,13 @@ class Mold {
   }
   
   getSensorPos(sensor, angle) {
-    sensor.x = (this.x + this.sensorDist*cos(angle) + width) % width;
-    sensor.y = (this.y + this.sensorDist*sin(angle) + height) % height;
+    sensor.x = (this.x + this.sensorDist*this.p.cos(angle) + this.p.width) % this.p.width;
+    sensor.y = (this.y + this.sensorDist*this.p.sin(angle) + this.p.height) % this.p.height;
   }
   
   resetValue(val){
     this.sensorAngle = val;
-    print('reset value '+val);
+    this.p.print('reset value '+val);
   }
 
 }
