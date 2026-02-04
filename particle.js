@@ -1,6 +1,7 @@
 
 class Particle {
-  constructor(p, defX = random(width),defY = random(height)) {
+ // constructor(p, defX = random(width),defY = random(height)) {
+  constructor(p, defX, defY){
     this.p = p;
     this.pos = this.p.createVector(defX, defY);
     this.vel = this.p.createVector(0, 0);//p5.Vector.random2D();
