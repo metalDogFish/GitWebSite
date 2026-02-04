@@ -22,11 +22,15 @@ class Particle {
     var y = this.p.floor(this.pos.y / scl);
     var index = x + y * cols;
     var force = vectors[index];
-    this.applyForce(force);
+   if(force){
+     this.applyForce(force);
+   }
   }
 
   applyForce(force) {
+   if(force){
     this.acc.add(force);
+   }
   }
 
   show() {
