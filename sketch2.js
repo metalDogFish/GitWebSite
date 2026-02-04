@@ -17,8 +17,8 @@ p.setup() = function(){
   canvas2.parent('sketch-container2');
   
   //referenced by mold
-  angleMode(DEGREES);
-  d = pixelDensity();
+  this.p.angleMode(DEGREES);
+  d = this.p.pixelDensity();
 
   //create an array of mold
   for (let i = 0; i < num; i++) {
@@ -26,14 +26,14 @@ p.setup() = function(){
   }
 
   //set up user interface--------------
-  slider = createSlider(0, 360, 45, 5);
+  slider = this.p.createSlider(0, 360, 45, 5);
   //slider.value = 45;
   slider.mouseClicked(sliderFunc);
   slider.parent('sketch-container2');
-  btnUp = createButton(" + ");
+  btnUp = this.p.createButton(" + ");
   btnUp.mouseClicked(butFuncUp);
   btnUp.parent('sketch-container2');
-  btnDn = createButton(" - ");
+  btnDn = this.p.createButton(" - ");
   btnDn.mouseClicked(butFuncDn);
   btnDn.parent('sketch-container2');
   //-------------------end interface
@@ -41,10 +41,10 @@ p.setup() = function(){
 
 p.draw = function() {
   //important that background is set to black, alpha = 5;
-  background(0, 5);
+  this.p.background(0, 5);
 
   //needed to detect pixel color
-  loadPixels();
+  this.p.loadPixels();
 
   //move and display molds
   for (let i = 0; i < num; i++) {
@@ -52,9 +52,9 @@ p.draw = function() {
     if (key == "s") {
       // If "s" key is pressed, molds stop moving
       molds[i].stop = true;
-      updatePixels();
-      noLoop();
-      print("frozen");
+      this.p.updatePixels();
+      this.p.noLoop();
+      this.p.print("frozen");
     }
 
     molds[i].update();
@@ -72,7 +72,7 @@ function butFuncUp() {
   //call slider func that changes mold
   sliderFunc();
 
-  print("increasing to " + (sv + 5));
+  this.p.print("increasing to " + (sv + 5));
 }
 
 function butFuncDn() {
@@ -83,12 +83,12 @@ function butFuncDn() {
   //call slider func that changes mold
   sliderFunc();
 
-  print("decreasing to " + (sv - 5));
+  this.p.print("decreasing to " + (sv - 5));
 }
 
 function sliderFunc() {
   let sv = slider.value();
-  console.log("slider reset " + sv);
+  this.p.console.log("slider reset " + sv);
   for (let m of molds) {
     //parameter takes slider value
     m.resetValue(sv);
