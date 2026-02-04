@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-      <script src="p5.js"></script>
-    <script src="p5.sound.min.js"></script>
-      
+          
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,18 +38,21 @@
 //particles get their directional movement from surrounding flowfield. </p>
         <div id="sketch-container"></div>
           <!-- Place the script after the container -->
-      <script src="sketch.js"></script>
-      <script src="particle.js"></script>
+    
         <a href="particle.js">View Code</a>
     </div>
          
 </section>
-
-
     
     <footer>
         <p>Contact: shadernyk@proton.me</p>
     </footer>
-
+      <--! load scripts at end of body in this order for best results -->
+<script src="p5.js"></script>
+<script src="p5.sound.min.js"></script>
+<script src="myScript.js"></script>
+<script src="sketch.js"></script>
+<script src="particle.js"></script>
+      
 </body>
 </html>
