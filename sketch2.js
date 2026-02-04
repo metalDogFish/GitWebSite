@@ -11,14 +11,14 @@ let d;
 let slider;
 let btnUp, btnDn;
 //let isPaused = false;
-p.setup() = function(){
+p.setup = function(){
  let canvas2 = p.createCanvas(400, 400);
   //reference container in index.html
   canvas2.parent('sketch-container2');
   
   //referenced by mold
-  this.p.angleMode(DEGREES);
-  d = this.p.pixelDensity();
+  p.angleMode(p.DEGREES);
+  d = p.pixelDensity();
 
   //create an array of mold
   for (let i = 0; i < num; i++) {
@@ -26,14 +26,14 @@ p.setup() = function(){
   }
 
   //set up user interface--------------
-  slider = this.p.createSlider(0, 360, 45, 5);
+  slider = p.createSlider(0, 360, 45, 5);
   //slider.value = 45;
   slider.mouseClicked(sliderFunc);
   slider.parent('sketch-container2');
-  btnUp = this.p.createButton(" + ");
+  btnUp = p.createButton(" + ");
   btnUp.mouseClicked(butFuncUp);
   btnUp.parent('sketch-container2');
-  btnDn = this.p.createButton(" - ");
+  btnDn = p.createButton(" - ");
   btnDn.mouseClicked(butFuncDn);
   btnDn.parent('sketch-container2');
   //-------------------end interface
@@ -41,26 +41,26 @@ p.setup() = function(){
 
 p.draw = function() {
   //important that background is set to black, alpha = 5;
-  this.p.background(0, 5);
+  p.background(0, 5);
 
   //needed to detect pixel color
-  this.p.loadPixels();
+  p.loadPixels();
 
   //move and display molds
   for (let i = 0; i < num; i++) {
     //trigger to stop mold growth
-    if (key == "s") {
+    if (p.key == "s") {
       // If "s" key is pressed, molds stop moving
       molds[i].stop = true;
-      this.p.updatePixels();
-      this.p.noLoop();
-      this.p.print("frozen");
+      p.updatePixels();
+      p.noLoop();
+      p.print("frozen");
     }
 
     molds[i].update();
     molds[i].display();
   }
-}
+};
 
 function butFuncUp() {
   // slider.value += 5;
@@ -72,7 +72,7 @@ function butFuncUp() {
   //call slider func that changes mold
   sliderFunc();
 
-  this.p.print("increasing to " + (sv + 5));
+  p.print("increasing to " + (sv + 5));
 }
 
 function butFuncDn() {
@@ -83,12 +83,12 @@ function butFuncDn() {
   //call slider func that changes mold
   sliderFunc();
 
-  this.p.print("decreasing to " + (sv - 5));
+  p.print("decreasing to " + (sv - 5));
 }
 
 function sliderFunc() {
   let sv = slider.value();
-  this.p.console.log("slider reset " + sv);
+  p.console.log("slider reset " + sv);
   for (let m of molds) {
     //parameter takes slider value
     m.resetValue(sv);
