@@ -1,9 +1,10 @@
 
 class Particle {
-  constructor(defX = random(width),defY = random(height)) {
-    this.pos = createVector(defX, defY);
-    this.vel = createVector(0, 0);//p5.Vector.random2D();
-    this.acc = createVector(0, 0);
+  constructor(p, defX = random(width),defY = random(height)) {
+    this.p = p;
+    this.pos = this.p.createVector(defX, defY);
+    this.vel = this.p.createVector(0, 0);//p5.Vector.random2D();
+    this.acc = this.p.createVector(0, 0);
     this.maxspeed = 4;
     this.prevPos = this.pos.copy();
   }
@@ -29,9 +30,9 @@ class Particle {
 
   show() {
     //stroke(255, 10);
-    stroke(75,190,200);
-    strokeWeight(4);
-    line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
+    this.p.stroke(75,190,200);
+    this.p.strokeWeight(4);
+  this.p.line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     this.updatePrev();
   }
 
@@ -41,20 +42,20 @@ class Particle {
   }
 
   edges() {
-    if (this.pos.x > width) {
+    if (this.pos.x > this.p.width) {
       this.pos.x = 0;
       this.updatePrev();
     }
     if (this.pos.x < 0) {
-      this.pos.x = width;
+      this.pos.x = this.p.width;
       this.updatePrev();
     }
-    if (this.pos.y > height) {
+    if (this.pos.y > this.p.height) {
       this.pos.y = 0;
       this.updatePrev();
     }
     if (this.pos.y < 0) {
-      this.pos.y = height;
+      this.pos.y = this.p.height;
       this.updatePrev();
     }
 
