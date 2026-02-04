@@ -17,7 +17,7 @@ class Particle {
     this.acc.mult(0);
   }
 
-  follow(vectors) {
+  follow(vectors,scl,cols) {
     var x = this.p.floor(this.pos.x / scl);
     var y = this.p.floor(this.pos.y / scl);
     var index = x + y * cols;
