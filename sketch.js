@@ -86,7 +86,7 @@ p.setup = function(){
   }
 
   for (let i = 0; i < particles.length; i++) {
-    particles[i].follow(flowfield);
+    particles[i].follow(flowfield,scl,cols);
     particles[i].update();
     particles[i].edges();
     particles[i].show();
