@@ -9,17 +9,15 @@ var inc = 0.1;
 var scl = 10;
 var cols, rows;
 var fr;
-
 var zoff = 0;
-
 var particles = [];
-
 var flowfield;
 var chBox, chBox2;
-
-function setup() {
+//need to use instance mode when using multiple sketches
+let sketch1 = function(p){
+p.setup = function(){
  
-  let canvas = createCanvas(300, 300);
+  let canvas = p.createCanvas(300, 300);
   //reference container in index.html
   canvas.parent('sketch-container');
  
@@ -45,7 +43,8 @@ function setup() {
   chBox2.parent('sketch-container');
 }
 
-function draw() {
+//function draw() {
+ p.draw = function(){
   background(20, 90); //makes particles appear a bit translucent
   // randomSeed(10);
   var yoff = 0;
@@ -103,5 +102,8 @@ function mouseClicked(){
   particles.push(p);
   print('new particle')
 }
+};
+
+new p5(sketch1);
 //https://www.youtube.com/watch?v=BjoM9oKOAKY&list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD&index=6
 //extending this to mimick ocean kelp moving with the currents..
