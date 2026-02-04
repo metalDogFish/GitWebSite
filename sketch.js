@@ -35,6 +35,7 @@ function setup() {
 
   for (let i = 0; i < 200; i++) {
     particles[i] = new Particle();
+    console.log("Drawing particle", i);
   }
 
   chBox = createCheckbox("z dimension",true);
