@@ -35,7 +35,7 @@ p.setup = function(){
 
   for (let i = 0; i < 200; i++) {
    //This ensures your class works correctly within the p5 instance mode and doesn't conflict with other sketches.
-    particles[i] = new Particle(p, p.random(p.width),p.random(p.height)));
+    particles[i] = new Particle(p, p.random(p.width),p.random(p.height));
   }
 
   chBox = this.p.createCheckbox("z dimension",true);
@@ -57,7 +57,7 @@ p.setup = function(){
       var index = x + y * cols;
       //var n = noise(xoff, yoff) * 255;
       var angle = this.p.noise(xoff, yoff, zoff) * this.p.TWO_PI * 2; //higher number induces more vortices.
-      var v = this.p.p5.Vector.fromAngle(angle);
+      var v = p.Vector.fromAngle(angle);
       v.setMag(0.5);
       flowfield[index] = v;
       xoff += inc;
@@ -79,7 +79,7 @@ p.setup = function(){
     yoff += inc;
     //Is checkbox1 checked? Say so.
     if (chBox.checked()) {
-      text("Flowing", 20, 40);
+      this.p.text("Flowing", 20, 40);
       zoff += 0.00003;
     }
     // zoff += 0.0003; //z acts like time dimension
@@ -97,12 +97,13 @@ p.setup = function(){
   fr.html(this.p.floor(this.p.frameRate()));
 }
 
-function mouseClicked(){
+//function mouseClicked(){
+ p.mousePressed = function(){
   let mx = this.p.mouseX;
   let my = this.p.mouseY;
   
-  let p = new Particle(p,mx,my)
-  particles.push(p);
+  let nup = new Particle(p,mx,my)
+  particles.push(nup);
   this.p.print('new particle')
 }
 };
