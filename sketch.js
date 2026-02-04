@@ -34,7 +34,7 @@ p.setup = function(){
   fr.style("color", col);
 
   for (let i = 0; i < 200; i++) {
-    particles[i] = new Particle();
+    particles[i] = new Particle(p);
   }
 
   chBox = createCheckbox("z dimension",true);
