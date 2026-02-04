@@ -22,7 +22,7 @@ p.setup() = function(){
 
   //create an array of mold
   for (let i = 0; i < num; i++) {
-    molds[i] = new Mold();
+    molds[i] = new Mold(p);
   }
 
   //set up user interface--------------
