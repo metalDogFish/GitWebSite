@@ -51,7 +51,7 @@ class Mold {
     index = 4*(this.d * this.p.floor(this.lSensorPos.y)) * (this.d * this.p.width) + 4*(this.d * this.p.floor(this.lSensorPos.x));
     l = this.p.pixels[index];
     
-    index = 4*(this.d * floor(this.fSensorPos.y)) * (this.d * this.p.width) + 4*(this.d * floor(this.fSensorPos.x));
+    index = 4*(this.d * this.p.floor(this.fSensorPos.y)) * (this.d * this.p.width) + 4*(this.d * this.p.floor(this.fSensorPos.x));
     f = this.p.pixels[index];
     
     // Compare values of f, l, and r to determine movement 
