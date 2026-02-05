@@ -1,6 +1,7 @@
 class Mold {
   constructor(p) {
     this.p = p;
+    this.d = p.pixelDensity();
     // Mold variables
     this.x = this.p.random(this.p.width);
     this.y = this.p.random(this.p.height); 
@@ -44,13 +45,13 @@ class Mold {
   
     // Get indices of the 3 sensor positions and get the color values from those indices
     let index, l, r, f;
-    index = 4*(d * this.p.floor(this.rSensorPos.y)) * (d * this.p.width) + 4*(d * this.p.floor(this.rSensorPos.x));
+    index = 4*(this.d * this.p.floor(this.rSensorPos.y)) * (this.d * this.p.width) + 4*(this.d * this.p.floor(this.rSensorPos.x));
     r = this.p.pixels[index];
     
-    index = 4*(d * this.p.floor(this.lSensorPos.y)) * (d * this.p.width) + 4*(d * this.p.floor(this.lSensorPos.x));
+    index = 4*(this.d * this.p.floor(this.lSensorPos.y)) * (this.d * this.p.width) + 4*(this.d * this.p.floor(this.lSensorPos.x));
     l = this.p.pixels[index];
     
-    index = 4*(d * floor(this.fSensorPos.y)) * (d * this.p.width) + 4*(d * floor(this.fSensorPos.x));
+    index = 4*(this.d * floor(this.fSensorPos.y)) * (this.d * this.p.width) + 4*(this.d * floor(this.fSensorPos.x));
     f = this.p.pixels[index];
     
     // Compare values of f, l, and r to determine movement 
