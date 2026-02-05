@@ -14,7 +14,7 @@ let btnUp, btnDn;
 p.setup = function(){
  let canvas2 = p.createCanvas(400, 400);
   //reference container in index.html
- // canvas2.parent('sketch-container2');
+  canvas2.parent('sketch-container2');
   
   //referenced by mold
   p.angleMode(p.DEGREES);
@@ -95,7 +95,8 @@ function sliderFunc() {
   }
 }
 };
-new p5(sketch2, 'sketch-container2');
+//new p5(sketch2, 'sketch-container2');
+new p5(sketch2);
 
 //2024/11/23-discovering slime molds-
 //testing code has revealing some interesting phenomena happing in the patterns when sensorAngle is changed.
