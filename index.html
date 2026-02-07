@@ -2,66 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perlin Flow</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #000;
-      color: #fff;
-      font-family: 'Courier New', monospace;
-      font-size: 1.2em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      position: relative;
-      font-weight: bold;
-    }
-    .content {
-      max-width: 80%;
-      margin: 0 auto;
-      text-align: center;
-      line-height: 1.4;
-      color: #00ffff;
-      text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-    }
-    h1 {
-      font-size: 2.5em;
-      margin: 0;
-      color: #00ffff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-      animation: glow 2s infinite alternate;
-    }
-    p {
-      font-size: 1.1em;
-      color: #ff00ff;
-      opacity: 0.9;
-      margin: 0.5em 0;
-      text-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
-      line-height: 1.5;
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 5px rgba(0, 255, 255, 0.5); }
-      to { text-shadow: 0 0 15px rgba(0, 255, 255, 0.9); }
-    }
-  </style>
+  <title>GEN / ART</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="content">
-    <h1>Perlin Flow</h1>
-    <p>Particles tracing paths through a 3D noise field.</p>
-    <h1>Iso-Metric Waves</h1>
-    <p>Oscillating cubic structures in isometric projection.</p>
-    <h1>Neon Chaos</h1>
-    <p>Drifting geometric primitives with motion blur trails.</p>
-  </div>
+
+  <main class="page">
+
+    <header class="header">
+      <h1>GEN<span>/</span>ART</h1>
+      <p class="subtitle">
+        A computational exploration of form, chaos, and algorithmic beauty.
+      </p>
+    </header>
+
+    <section class="frame">
+      <div class="meta">
+        <span class="pill">2024.02</span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="flow">
+        <!-- Decorative SVG lines -->
+        <svg viewBox="0 0 1000 600" preserveAspectRatio="none">
+          <path d="M0 300 C200 200 400 400 600 300 800 200 1000 350 1200 300"
+                fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <path d="M0 340 C200 260 400 440 600 330 800 260 1000 420 1200 360"
+                fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <footer class="project">
+        <div>
+          <h2>Perlin Flow</h2>
+          <p>Particles tracing paths through a 3D noise field.</p>
+        </div>
+        <div class="credit">Made with Replit ✕</div>
+      </footer>
+    </section>
+
+  </main>
+
 </body>
+</html>
+
 </html>
