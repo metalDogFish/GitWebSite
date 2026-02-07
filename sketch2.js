@@ -29,7 +29,7 @@ p.setup = function(){
   slider = p.createSlider(0, 360, 45, 5);
   //slider.value = 45;
   slider.mouseClicked(sliderFunc);
- // slider.input(sliderFunc);//ai suggested
+  slider.input(() => (sliderFunc(p));//ai suggested pass p explicitly
   slider.parent('sketch-container2');
   btnUp = p.createButton(" + ");
   btnUp.mouseClicked(butFuncUp);
@@ -87,7 +87,7 @@ function butFuncDn() {
   p.print("decreasing to " + (sv - 5));
 }
 
-function sliderFunc() {
+function sliderFunc(p) {
   let sv = slider.value();
   p.console.log("slider reset " + sv);
   for (let m of molds) {
