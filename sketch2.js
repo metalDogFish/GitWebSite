@@ -28,8 +28,8 @@ p.setup = function(){
   //set up user interface--------------
   slider = p.createSlider(0, 360, 45, 5);
   //slider.value = 45;
-  //slider.mouseClicked(sliderFunc);
-  slider.input(sliderFunc);
+  slider.mouseClicked(sliderFunc);
+ // slider.input(sliderFunc);//ai suggested
   slider.parent('sketch-container2');
   btnUp = p.createButton(" + ");
   btnUp.mouseClicked(butFuncUp);
