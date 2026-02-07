@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-          
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nykwist - Game Programmer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="myScript.js"></script>
-        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perlin Flow</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(45deg, #000033, #000066);
+    }
+    .content {
+      text-align: center;
+      max-width: 80%;
+      font-size: 1.2em;
+      color: #f0f0f0;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: #00ffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 1.1em;
+      margin: 0.5em 0;
+      color: #ff00ff;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Shawn Nykwist</h1>
-        <p>Game Programmer</p>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>coder/musician</p>     
-        <p> graduate in Design and Technology specialized in Game Design
-        C#,C++,Java,Javascript,HTML,CSS,UnityGameEngine,UnrealGameEngine
-        </p>
-       <p>degree in Fine Arts specialized in music
-          <br>sax,piano<br>
-        </p>
-    </section>
-    
-    <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>Project Perlin</h3>
-        <p>Random Particle movement using Perlin Noise</p>
-        <p>// Flowfields with persistant particles.
-//flowfields are created using Perlin noise mapped to a 2d grid.
-//z dimension toggle allows flowfield to move through time.
-//curtain toggle hides background grid to focuss on particle movement.
-//particles get their directional movement from surrounding flowfield. </p>
-        <div id="sketch-container"></div>
-          <!-- Place the script after the container -->
-    
-        <a href="particle.js">View Code</a>
-    </div>
-         
-</section>
-    
-    <footer>
-        <p>Contact: shadernyk@proton.me</p>
-    </footer>
-      <!-- load scripts at end of body in this order for best results -->
-<script src="p5.js"></script>
-<script src="p5.sound.min.js"></script>
-<script src="myScript.js"></script>
-<script src="sketch.js"></script>
-<script src="particle.js"></script>
-      
+  <div class="content">
+    <h1>Perlin Flow</h1>
+    <p>Particles tracing paths through a 3D noise field.</p>
+    <p>Iso-Metric Waves: Oscillating cubic structures in isometric projection.</p>
+    <p>Neon Chaos: Drifting geometric primitives with motion blur trails.</p>
+  </div>
 </body>
 </html>
