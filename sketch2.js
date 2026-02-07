@@ -29,7 +29,8 @@ p.setup = function(){
   slider = p.createSlider(0, 360, 45, 5);
   //slider.value = 45;
   slider.mouseClicked(sliderFunc);
-  slider.input(() => (sliderFunc(p));//ai suggested pass p explicitly
+ slider.input(sliderFunc);
+ // slider.input(() => (sliderFunc(p));//ai suggested pass p explicitly
   slider.parent('sketch-container2');
   btnUp = p.createButton(" + ");
   btnUp.mouseClicked(butFuncUp);
