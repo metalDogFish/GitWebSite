@@ -1,7 +1,4 @@
-*body {
-  background: red !important;
-}
-
+*
 {
   box-sizing: border-box;
   margin: 0;
@@ -47,6 +44,26 @@ body {
   padding: 28px;
   min-height: 560px;
   background: #000;
+}
+.flow-line {
+  fill: none;
+  stroke: rgba(255,255,255,0.14);
+  stroke-width: 1;
+  animation: drift 24s linear infinite;
+}
+
+.flow-line.b {
+  opacity: 0.5;
+  animation-duration: 32s;
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-120px);
+  }
 }
 
 .meta {
