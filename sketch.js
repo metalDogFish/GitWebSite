@@ -27,7 +27,7 @@ function setup() {
  slider.parent('sketch-container');
   slider.mouseClicked(sliderFunc);
   btnUp = createButton(" + ");
- btnup.parent('sketch-container');
+ btnUp.parent('sketch-container');
   btnUp.mouseClicked(butFuncUp);
   btnDn = createButton(" - ");
  btnDn.parent('sketch-container');
