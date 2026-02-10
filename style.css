@@ -23,7 +23,9 @@ section {
   max-width: 800px; /* Optional: limits width for better layout */
   padding: 0 20px;
 }
-
+#peace-image {
+  transform: rotate(180deg);
+}
 .project {
   border: 1px solid #ddd;
   padding: 20px;
