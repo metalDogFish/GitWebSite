@@ -88,9 +88,11 @@ function butFuncDn() {
   p.print("decreasing to " + (sv - 5));
 }
 
-function sliderFunc(p) {
+//function sliderFunc(p) {
+ function sliderFunc(){
   let sv = slider.value();
-  p.console.log("slider reset " + sv);
+  //p.console.log("slider reset " + sv);
+  console.log("slider reset " + sv);
   for (let m of molds) {
     //parameter takes slider value
     m.resetValue(sv);
