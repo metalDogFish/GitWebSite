@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-          
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nykwist - Game Programmer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="myScript.js"></script>
-        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Our BnB</title>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Shawn Nykwist</h1>
-        <p>Game Programmer</p>
+
+  <div class="site_wrap">
+
+    <header role="banner">
+
+      <h1 class="site_title">Our BnB</h1>
+
+      <input type="checkbox" id="open_menu" class="open_menu">
+
+      <label for="open_menu" class="burger">
+
+        <svg width="40" height="30">
+          <line x1="0" y1="3" x2="40" y2="3"></line>
+          <line x1="0" y1="15" x2="40" y2="15"></line>
+          <line x1="0" y1="27" x2="40" y2="27"></line>
+        </svg>
+
+      Toggle Menu</label>
+
+      <nav role="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="accommodation.html">Accommodation</a>
+        <a href="guestcomments.html">Guest Comments</a>
+        <a href="rates.html">Rates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
     </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>coder/musician</p>     
-        <p> graduate in Design and Technology specialized in Game Design
-        C#,C++,Java,Javascript,HTML,CSS,UnityGameEngine,UnrealGameEngine
-        </p>
-       <p>degree in Fine Arts specialized in music
-          <br>sax,piano<br>
-        </p>
-    </section>
-    
-    <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>Project Perlin</h3>
-        <p>Random Particle movement using Perlin Noise</p>
-        <p>// Flowfields with persistant particles.
-//flowfields are created using Perlin noise mapped to a 2d grid.
-//z dimension toggle allows flowfield to move through time.
-//curtain toggle hides background grid to focuss on particle movement.
-//particles get their directional movement from surrounding flowfield. </p>
-        <div id="sketch-container"></div>
-          <!-- Place the script after the container -->
-    
-        <a href="particle.js">View Code</a>
-    </div>
-         
-</section>
-    
+
+    <main>
+
+      <section class="hero">
+        <img src="images/hero.jpg" alt="Ocean view from accommodation">
+        <div class="hero_content">
+          <div class="hero_tagline">
+            Luxury, just for you
+          </div>
+          <div class="hero_button">
+            <a href="contact.html" class="blue_button">Check Availability</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page">
+        <h2 class="page_heading">Welcome, enjoy your stay</h2>
+        <div class="page_content">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velitesse cillum dolore eu fugiat nulla pariatur. Excepteur sintoccaecat cupidatat non proident, sunt in culpa qui officiadeserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <img src="images/home_1.jpg" alt="Bedroom">
+        </div>
+      </section>
+
+    </main>
+
     <footer>
-        <p>Contact: shadernyk@proton.me</p>
+      <p>&copy; Copyright 2018 Our BnB</p>
     </footer>
-      <!-- load scripts at end of body in this order for best results -->
-<script src="p5.js"></script>
-<script src="p5.sound.min.js"></script>
-<script src="myScript.js"></script>
-<script src="sketch.js"></script>
-<script src="particle.js"></script>
-      
+
+  </div>
+
 </body>
 </html>
