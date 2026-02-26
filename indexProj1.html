@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+          
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nykwist - Game Programmer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myScript.js"></script>
+        
+</head>
+<body>
+    <header>
+        <h1>Shawn Nykwist</h1>
+        <p>Game Programmer</p>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>coder/musician</p>     
+        <p> graduate in Design and Technology specialized in Game Design
+        C#,C++,Java,Javascript,HTML,CSS,UnityGameEngine,UnrealGameEngine
+        </p>
+       <p>degree in Fine Arts specialized in music
+          <br>sax,piano<br>
+        </p>
+    </section>
+    
+    <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Project Perlin (Little Fish)</h3>
+        <p>Random Particle movement using Perlin Noise</p>
+        <p> Flowfields with persistant particles.
+flowfields are created using Perlin noise mapped to a 2d grid.
+z dimension toggle allows flowfield to move through time.
+curtain toggle hides background grid to focuss on particle movement.
+particles get their directional movement from surrounding flowfield. </p>
+        <div id="sketch-container"></div>
+          <!-- Place the script after the container -->
+    
+        <a href="particle.js">View Code</a>
+    </div>
+         
+</section>
+    
+    <footer>
+        <p>Contact: shadernyk@proton.me</p>
+    </footer>
+      <!-- load scripts at end of body in this order for best results -->
+<script src="p5.js"></script>
+<script src="p5.sound.min.js"></script>
+<script src="myScript.js"></script>
+<script src="sketch.js"></script>
+<script src="particle.js"></script>
+      
+</body>
+</html>
