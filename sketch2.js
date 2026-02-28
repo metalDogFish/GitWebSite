@@ -1,0 +1,116 @@
+//Slime Molds- changing the sensor angle results in wild variations..
+//----------------------------------------s.nykwist
+
+
+//instance mode
+let sketch2 = function(p){
+ //then variables
+ let molds = [];
+let num = 4000;
+let d;
+let slider;
+let btnUp, btnDn;
+//let isPaused = false;
+p.setup = function(){
+ let canvas2 = p.createCanvas(400, 400);
+  //reference container in index.html
+  canvas2.parent('sketch-container2');
+  
+  //referenced by mold
+  p.angleMode(p.DEGREES);
+  d = p.pixelDensity();
+
+  //create an array of mold
+  for (let i = 0; i < num; i++) {
+    molds[i] = new Mold(p);
+  }
+
+  //set up user interface--------------
+  slider = p.createSlider(0, 360, 45, 5);
+  //slider.value = 45;
+  slider.mouseClicked(sliderFunc);
+ slider.input(sliderFunc);
+ // slider.input(() => (sliderFunc(p));//ai suggested pass p explicitly
+  slider.parent('sketch-container2');
+  btnUp = p.createButton(" + ");
+  btnUp.mouseClicked(butFuncUp);
+  btnUp.parent('sketch-container2');
+  btnDn = p.createButton(" - ");
+  btnDn.mouseClicked(butFuncDn);
+  btnDn.parent('sketch-container2');
+  //-------------------end interface
+}
+
+p.draw = function() {
+  //important that background is set to black, alpha = 5;
+  p.background(0, 5);
+
+  //needed to detect pixel color
+  p.loadPixels();
+
+  //move and display molds
+  for (let i = 0; i < num; i++) {
+    //trigger to stop mold growth
+    if (p.key == "s") {
+      // If "s" key is pressed, molds stop moving
+      molds[i].stop = true;
+      p.updatePixels();
+      p.noLoop();
+      p.print("frozen");
+    }
+
+    molds[i].update();
+    molds[i].display();
+  }
+};
+
+function butFuncUp() {
+  // slider.value += 5;
+  //slider.setValue(5);
+  //get original slider value
+  let sv = slider.value();
+  //try to set slider adding 5 to value
+  slider.value(sv + 5);
+  //call slider func that changes mold
+  sliderFunc();
+
+  p.print("increasing to " + (sv + 5));
+}
+
+function butFuncDn() {
+  //get original slider value
+  let sv = slider.value();
+  //try to set slider adding 5 to value
+  slider.value(sv - 5);
+  //call slider func that changes mold
+  sliderFunc();
+
+  p.print("decreasing to " + (sv - 5));
+}
+
+//function sliderFunc(p) {
+ function sliderFunc(){
+  let sv = slider.value();
+  //p.console.log("slider reset " + sv);
+  console.log("slider reset " + sv);
+  for (let m of molds) {
+    //parameter takes slider value
+    m.resetValue(sv);
+  }
+}
+};
+//new p5(sketch2, 'sketch-container2');
+new p5(sketch2);
+
+//2024/11/23-discovering slime molds-
+//testing code has revealing some interesting phenomena happing in the patterns when sensorAngle is changed.
+//resetAngles 0-produces straight lines,
+//5 produces a blurry curling pattern,
+//45 produces a well-defined web like pattern
+//90 produces a thicker faint chain-link fence pattern
+//110 patterns begin to break down to form symbols, roadways & paths!
+//135-produces tight cheerio circles(low action scene)
+//180 tight circles are replaced by swirling atom like structures.
+//increased activity resembling battling ant colonies.
+//230->and up looks like energetic white quantum foam.(high action)
+//360 gives no restriction of angle, so we get straight lines just like angle 0
