@@ -38,9 +38,9 @@ section {
     color: #0066cc;
 }
 .project_b {
-  margin-right: 150px;
+  padding-right: 150px;
     margin-left: 15px;
-    color: #0066cc;
+    <!-- color: #0066cc; -->
 }
     canvas {
   display: block;
