@@ -37,7 +37,10 @@ section {
     margin-right: 15px;
     color: #0066cc;
 }
-
+.project b {
+    margin-left: 15px;
+    color: #0033cc;
+}
     canvas {
   display: block;
 }
