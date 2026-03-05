@@ -33,11 +33,11 @@ section {
   box-sizing: border-box;
 }
 
-.project a {
+.project_a {
     margin-right: 15px;
     color: #0066cc;
 }
-.project b {
+.project_b {
     margin-left: 15px;
     color: #0033cc;
 }
