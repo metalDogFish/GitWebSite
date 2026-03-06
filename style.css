@@ -29,6 +29,7 @@ section {
 }
 #project-image{
   /*resize image-set only one dimension, height will match to preserve ratio*/
+  /*add hover effect? */
 width:200px;
 }
 
