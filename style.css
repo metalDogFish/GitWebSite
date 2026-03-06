@@ -25,8 +25,8 @@ section {
 }
 #peace-image {
   transform: rotate(180deg);
-  float: right;
-  align-items: center;
+  float: center;
+  
 }
 .project {
   border: 1px solid #ddd;
