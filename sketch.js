@@ -19,7 +19,7 @@ var chBox, chBox2;
 
 function setup() {
  
-  let canvas = createCanvas(600, 600);
+  let canvas = createCanvas(500, 500);
   //reference container in index.html
   canvas.parent('sketch-container');
  
