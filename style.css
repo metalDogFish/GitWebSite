@@ -21,6 +21,13 @@ header {
     color: white;
     text-shadow: 2px 2px 4px #000000;
   }
+.frameGrowth{
+border-style:none;
+}
+.frameGrowth:hover {
+  /* width: 300px; */
+  border-style: dotted;
+}
 section {
   margin: 20px 0; /* Reduced margin for better alignment */
   width: 100%;
