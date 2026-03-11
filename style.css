@@ -23,6 +23,7 @@ header {
   }
 .frameGrowth{
 border-style:none;
+  transition:border-style 2s;
 }
 .frameGrowth:hover {
   /* width: 300px; */
