@@ -18,8 +18,9 @@ function setup() {
   keyMax = 8;
   for (let i = 0; i < 8; i++) {
     buttons[i] = createButton("tone" + (i + 1));
-
     buttons[i].size(width / keyMax, 150);
+    
+    buttons[i].parent('container3');
     // buttons[i].mousePressed(playTone);
     //to allow parameters in function call, use method below
     buttons[i].mousePressed(() => {
