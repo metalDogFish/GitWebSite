@@ -5,7 +5,7 @@ var bubbles = [];
 function setup() {
   let canvs = createCanvas(400, 400);
  //reference container in index.html
-  canvs.parent('container3');
+  canvs.parent('sketch-container3');
   //attack/decay/sustain/release----sound-------------//
   env = new p5.Env();
   env.setADSR(0.05, 0.1, 0.5, 1);
@@ -20,7 +20,7 @@ function setup() {
     buttons[i] = createButton("tone" + (i + 1));
     buttons[i].size(width / keyMax, 150);
     
-    buttons[i].parent('container3');
+    buttons[i].parent('sketch-container3');
     // buttons[i].mousePressed(playTone);
     //to allow parameters in function call, use method below
     buttons[i].mousePressed(() => {
