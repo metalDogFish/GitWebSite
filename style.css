@@ -31,8 +31,8 @@ border-style:none;
 }
 .frameGrowth .hoverText {
   opacity: 0;
-  text-align: right;
   transition: opacity 0.3s;
+  text-align: right;
 }
 .frameGrowth:hover .hoverText {
   opacity: 1;  
