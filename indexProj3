@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+          
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nykwist - Game Programmer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myScript.js"></script>
+        
+</head>
+<body>
+    <header>
+        <h1>Shawn Nykwist</h1>
+        <p>Game Programmer</p>
+          <a href="index.html">
+          <p>BACK</p>
+          </a>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <h4>Coder</h4>     
+        <p> graduate in game design from the Academy of Design and Technology<br>
+        C#, C++, Java, Javascript, HTML, CSS, UnityGameEngine, UnrealGameEngine
+        </p>
+   
+       <h4>Musician</h4>
+          <p>saxophones, piano, Pro Tools, GarageBand, Audacity, Logic
+        </p>
+              <img src="alienshawn.jpg" alt="alien pic" width="200" style="float:right; margin-left:10px;">
+    </section>
+    <footer>
+        <p>Contact: shadernyk@proton.me</p>
+    </footer>
+</body>
+</html>
