@@ -31,10 +31,11 @@ border-style:none;
 }
 .frameGrowth .hoverText {
   opacity: 0;
+  text-align: right;
   transition: opacity 0.3s;
 }
 .frameGrowth:hover .hoverText {
-  opacity: 1;
+  opacity: 1;  
 }
 section {
   margin: 20px 0; /* Reduced margin for better alignment */
