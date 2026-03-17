@@ -29,6 +29,13 @@ border-style:none;
   /* width: 300px; */
   border-style: dotted;
 }
+.frameGrowth .hoverText {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.frameGrowth:hover .hoverText {
+  opacity: 1;
+}
 section {
   margin: 20px 0; /* Reduced margin for better alignment */
   width: 100%;
