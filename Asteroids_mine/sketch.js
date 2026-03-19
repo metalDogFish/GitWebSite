@@ -213,7 +213,7 @@ function preload() {
 ////////////////////////////////////////////////setup
 function setup() {
  let canv = createCanvas(500, 500);
-  canv.parent("sketch_container4");
+  canv.parent("sketch-container4");
   rectMode(CENTER);
   imageMode(CENTER);
   textAlign(CENTER);
