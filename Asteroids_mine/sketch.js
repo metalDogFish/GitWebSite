@@ -128,7 +128,7 @@ class soundFX2 {
   constructor() {
     this.beat1 = new Audio("Asteroids_mine/beat1.wav");
     this.beat2 = new Audio("Asteroids_mine/beat2.wav");
-    this.beat3 = loadSound("beat1.wav");
+    this.beat3 = loadSound("Asteroids_mine/beat1.wav");
     this.boxPat = [1, 0, 1, 0, 1, 0, 1, 0];
     this.drumPat = [0, 1, 0, 1, 0, 1, 0, 1];
     this.boxPhrase = new p5.Phrase("box", this.playBoxx, this.boxPat);
