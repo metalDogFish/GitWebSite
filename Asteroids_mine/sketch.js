@@ -304,27 +304,26 @@ function setup() {
 
   wonHiScore = false;
   // userInput = createInput("", width/2, height-100);
-  userInput = createInput("");
-  userInput.parent("sketch-container4");
+  userInput = createInput("");  
   userInput.position(width / 3, height - 100);
   userInput.hide();
+  userInput.parent("sketch-container4");
+  
   userButt = createButton("ok");
-  userButt.parent("sketch-container4");
   userButt.position((width / 3) * 2, height - 100);
   userButt.mouseClicked(hiScoreFunc);
   userButt.hide();
+  userButt.parent("sketch-container4");
+  
   // soundBut = createButton("sound");
   // soundBut.position(20, height-30);
   // soundBut.mouseClicked(soundOptionFunc);
   soundRadioBut = createRadio();
-  soundRadioBut.parent("sketch-container4");
   soundRadioBut.position(10, height - 30);
   soundRadioBut.size(90);
   soundRadioBut.option("on");
-
-  // soundRadioBut.option('sound off')
-  // soundRadioBut.selected('sound off');
   soundRadioBut.mouseClicked(soundOptionFunc);
+    soundRadioBut.parent("sketch-container4");
 }
 
 /////////////////////////////////////////draw
