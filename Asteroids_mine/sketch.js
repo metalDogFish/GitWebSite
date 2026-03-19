@@ -48,6 +48,7 @@ let sfx1, sfx2;
 let tempoInt = 0;
 let myBPM = 20;
 
+
 /*
 
 function loadData(scoresData) {
@@ -215,6 +216,8 @@ function setup() {
  let canv = createCanvas(500, 500);
   console.log(select("#sketch-container4"));
   canv.parent("sketch-container4");
+  let canvasPos = canv.position();
+  
   rectMode(CENTER);
   imageMode(CENTER);
   textAlign(CENTER);
@@ -305,12 +308,14 @@ function setup() {
   wonHiScore = false;
   // userInput = createInput("", width/2, height-100);
   userInput = createInput("");  
-  userInput.position(width / 3, height - 100);
+  //userInput.position(width / 3, height - 100);
+  userInput.position(canvasPos.x + width / 3, canvasPos.y + height - 100);
   userInput.hide();
   userInput.parent("sketch-container4");
   
   userButt = createButton("ok");
-  userButt.position((width / 3) * 2, height - 100);
+  //userButt.position((width / 3) * 2, height - 100);
+  userButt.position(canvasPos.x + (width / 3) * 2, canvasPos.y + height - 100);
   userButt.mouseClicked(hiScoreFunc);
   userButt.hide();
   userButt.parent("sketch-container4");
@@ -319,7 +324,8 @@ function setup() {
   // soundBut.position(20, height-30);
   // soundBut.mouseClicked(soundOptionFunc);
   soundRadioBut = createRadio();
-  soundRadioBut.position(10, height - 30);
+  //soundRadioBut.position(10, height - 30);
+  soundRadioBut.position(canvasPos.x + 10, canvasPos.y + height - 30);
   soundRadioBut.size(90);
   soundRadioBut.option("on");
   soundRadioBut.mouseClicked(soundOptionFunc);
