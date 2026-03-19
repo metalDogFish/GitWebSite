@@ -305,9 +305,11 @@ function setup() {
   wonHiScore = false;
   // userInput = createInput("", width/2, height-100);
   userInput = createInput("");
+  userInput.parent("sketch-container4");
   userInput.position(width / 3, height - 100);
   userInput.hide();
   userButt = createButton("ok");
+  userButt.parent("sketch-container4");
   userButt.position((width / 3) * 2, height - 100);
   userButt.mouseClicked(hiScoreFunc);
   userButt.hide();
