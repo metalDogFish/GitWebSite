@@ -318,6 +318,7 @@ function setup() {
   soundRadioBut.position(10, height - 30);
   soundRadioBut.size(90);
   soundRadioBut.option("on");
+  soundRadioBut.parent("sketch-container4");
   // soundRadioBut.option('sound off')
   // soundRadioBut.selected('sound off');
   soundRadioBut.mouseClicked(soundOptionFunc);
