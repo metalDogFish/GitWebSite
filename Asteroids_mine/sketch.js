@@ -89,33 +89,33 @@ class SoundFX {
     switch (this.num) {
       case 1:
         console.log("1");
-        let s1 = new Audio("beat1.wav");
+        let s1 = new Audio("Asteroids_mine/beat1.wav");
         s1.play();
         break;
       case 2:
-        let s2 = new Audio("beat2.wav");
+        let s2 = new Audio("Asteroids_mine/beat2.wav");
         console.log("s2");
         s2.play();
         break;
       case 3:
-        let s3 = new Audio("laser.wav");
+        let s3 = new Audio("Asteroids_mine/laser.wav");
         s3.play();
         console.log("3");
         break;
       case 4:
-        let s4 = new Audio("bang1.wav");
+        let s4 = new Audio("Asteroids_mine/bang1.wav");
         s4.volume = 0.5;
         s4.play();
         console.log("4");
         break;
       case 5:
         console.log("5");
-        let s5 = new Audio("bang2.wav");
+        let s5 = new Audio("Asteroids_mine/bang2.wav");
         s5.volume = 0.5;
         s5.play();
         break;
       case 6:
-        let s6 = new Audio("bang3.wav");
+        let s6 = new Audio("Asteroids_mine/bang3.wav");
         s6.volume = 0.5;
         s6.play();
         console.log("6");
@@ -126,8 +126,8 @@ class SoundFX {
 
 class soundFX2 {
   constructor() {
-    this.beat1 = new Audio("beat1.wav");
-    this.beat2 = new Audio("beat2.wav");
+    this.beat1 = new Audio("Asteroids_mine/beat1.wav");
+    this.beat2 = new Audio("Asteroids_mine/beat2.wav");
     this.beat3 = loadSound("beat1.wav");
     this.boxPat = [1, 0, 1, 0, 1, 0, 1, 0];
     this.drumPat = [0, 1, 0, 1, 0, 1, 0, 1];
@@ -175,8 +175,8 @@ class soundFX2 {
 function preload() {
   soundFormats("mp3", "wav");
   //fireSound = loadSound("laser.wav");
-  hiTone = loadSound("beat1.wav");
-  loTone = loadSound("beat2.wav");
+  hiTone = loadSound("Asteroids_mine/beat1.wav");
+  loTone = loadSound("Asteroids_mine/beat2.wav");
   sfx1 = new SoundFX(1); //beat1
   sfx2 = new SoundFX(2); //beat2
   //use new design.
@@ -184,7 +184,7 @@ function preload() {
   
   fireSound = new SoundFX(3);
 
-  thrustSound = loadSound("thrust.wav");
+  thrustSound = loadSound("Asteroids_mine/thrust.wav");
   //thrustSound = new SoundFX(4);problems with looping here
 
   // sounds["thrust"] = loadSound("thrust.wav");
@@ -198,17 +198,17 @@ function preload() {
 
  
 
-  bigSaucerFx = loadSound("saucerBig.wav");
+  bigSaucerFx = loadSound("Asteroids_mine/saucerBig.wav");
   bigSaucerFx.setVolume(0.7);
-  smallSaucerFx = loadSound("saucerSmall.wav");
+  smallSaucerFx = loadSound("Asteroids_mine/saucerSmall.wav");
   smallSaucerFx.setVolume(0.5);
 
   // gameOver = loadSound('gameover.wav');
   //load font
-  font = loadFont("Hyperspace.otf");
-  sPic = loadImage("clicktostart.png");
-  banner = loadImage("AstroidBanner.png");
-  bgPoster = loadImage("astroidCover.png");
+  font = loadFont("Asteroids_mine/Hyperspace.otf");
+  sPic = loadImage("Asteroids_mine/clicktostart.png");
+  banner = loadImage("Asteroids_mine/AstroidBanner.png");
+  bgPoster = loadImage("Asteroids_mine/astroidCover.png");
 }
 ////////////////////////////////////////////////setup
 function setup() {
