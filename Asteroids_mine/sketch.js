@@ -246,7 +246,7 @@ function setup() {
   saucer = new Saucer();
   saucer.active = false;
 
-  isSoundOn = false;
+  isSoundOn = true;
 
  // let boxPhrase = new p5.Phrase("box", playBox, boxPat);
   //let drumPhrase = new p5.Phrase("drum", playDrum, drumPat);
