@@ -323,6 +323,7 @@ function setup() {
   // soundBut = createButton("sound");
   // soundBut.position(20, height-30);
   // soundBut.mouseClicked(soundOptionFunc);
+  /*
   soundRadioBut = createRadio();
   //soundRadioBut.position(10, height - 30);
   soundRadioBut.position(canvasPos.x + 10, canvasPos.y + height - 30);
@@ -330,6 +331,7 @@ function setup() {
   soundRadioBut.option("on");
   soundRadioBut.mouseClicked(soundOptionFunc);
     soundRadioBut.parent("sketch-container4");
+*/
 }
 
 /////////////////////////////////////////draw
