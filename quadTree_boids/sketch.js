@@ -13,7 +13,8 @@ let pointNum = 1000;
 var perceptionRadius = 14;
 
 function setup() {
-  createCanvas(500, 500);
+  let canv = createCanvas(500, 500);
+  canv.parent("sketch-container5");
   background(22);
   frameRate(60);
 
@@ -35,6 +36,7 @@ function setup() {
   }
 
   myRadio = createRadio();
+  myRadio.parent("sketch-container5");
   myRadio.size = 60;
   //REMEMBER, the radio parameters are both strings!
   myRadio.option(true, "flocking");
