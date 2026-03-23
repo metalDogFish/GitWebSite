@@ -213,7 +213,7 @@ function preload() {
 }
 ////////////////////////////////////////////////setup
 function setup() {
- let canv = createCanvas(600, 600);
+ let canv = createCanvas(800, 800);
   console.log(select("#sketch-container4"));
   canv.parent("sketch-container4");
   let canvasPos = canv.position();
