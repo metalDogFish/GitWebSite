@@ -28,7 +28,6 @@ border-style:none;
 .frameGrowth:hover {
   /* width: 300px; */
   
-  transition: opacity 0.3s;
   border-style: dotted;
 }
 .frameGrowth .hoverText {
