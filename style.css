@@ -23,10 +23,12 @@ header {
   }
 .frameGrowth{
 border-style:none;
-  transition:border-style 2s;
+  transition:border-style 0.3s;
 }
 .frameGrowth:hover {
   /* width: 300px; */
+  opacity: 0;
+  transition: opacity 0.3s;
   border-style: dotted;
 }
 .frameGrowth .hoverText {
